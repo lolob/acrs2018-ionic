@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Registration ACRS 2018 Tool
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <img class="logo" src="assets/imgs/acrs2018letter.png">
+  <br><br><br><br>
+  <button block ion-button (click)="scanqrcode()">Scan QR-Code</button>
+  <!-- <button ion-button (click)="pageParticipantDetail2()">Scan QR-Code</button> -->
+  <br><br>
+  <h2>Search Registration ID</h2>
+  <ion-list>
+
+      <ion-item>
+        <ion-label>Registration ID</ion-label>
+        <ion-input [(ngModel)]= "regidsearch" type="text" placeholder="enter last 3 digits i.e 011 "></ion-input>
+      </ion-item>
+    </ion-list>
+    <button block ion-button (click)="searchregid()">Search</button>
 </ion-content>
