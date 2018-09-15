@@ -18,24 +18,40 @@
 
     <ion-card>
         <ion-card-header>
-          Participant Details
+          Registration id : {{participant.registrationid}}
         </ion-card-header>
       
         <ion-list>
+          <ion-item>
+           Salutation : {{participant.title}}
+          </ion-item>
+
           <ion-item>
            First name : {{participant.firstname}}
           </ion-item>
       
           <ion-item>            
-            Last name : {{participant.lastname}}
+           Last name : {{participant.lastname}}
           </ion-item>
       
           <ion-item>            
-            Payment : {{participant.paymentverified}}
+           Country : {{participant.country}}
+          </ion-item>
+
+          <ion-item>            
+           Registration type : {{participant.regtype}}
           </ion-item>
       
           <ion-item>            
-            Attending as : {{participant.regtype}}
+           Attend as : {{participant.attendas}}
+          </ion-item>
+
+          <ion-item>            
+           Paper id : {{participant.paperid}}
+          </ion-item>
+
+          <ion-item>            
+           Payment : {{participant.paymentverified}}
           </ion-item>
       
           <!-- <ion-item>
@@ -51,6 +67,10 @@
         </ion-list>
       </ion-card>
 
-      <button ion-button (click)="markpaymentverified()">Mark payment as verified</button>
-
+      <button ion-button color="secondary">Check-in participant</button>
+      <br><br>
+      <button ion-button color="danger" (click)="markpaymentverified()">Mark payment as verified</button>
+      <br><br>
+      <button ion-button>Conference kits checked</button>
+      
 </ion-content>
