@@ -12,7 +12,7 @@ import { LoadingController } from 'ionic-angular';
 @Injectable()
 export class ApiAcrsProvider {
  
-  url:string = "https://lolobs.pythonanywhere.com"
+  url:string = "https://lolobs.mrsa.gov.my"
 
   constructor(public http: HttpClient, public loadingCtrl:LoadingController) {
     console.log('Hello ApiAcrsProvider Provider');
